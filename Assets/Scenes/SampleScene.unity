@@ -194,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 171285091}
   - component: {fileID: 171285092}
+  - component: {fileID: 171285093}
   m_Layer: 8
   m_Name: left_hand
   m_TagString: Untagged
@@ -232,6 +233,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &171285093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171285090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3553de4ebdb6b489e450e426b14e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasWeapon: 0
+  weaponBroken: 0
+  weapon: {fileID: 1343273719}
 --- !u!1 &178175893
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,6 +999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 976241002}
   - component: {fileID: 976241003}
+  - component: {fileID: 976241004}
   m_Layer: 8
   m_Name: right_foot
   m_TagString: Untagged
@@ -1021,6 +1038,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &976241004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976241001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3553de4ebdb6b489e450e426b14e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasWeapon: 0
+  weaponBroken: 0
+  weapon: {fileID: 1991412299}
 --- !u!1 &991128785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1452724994}
   - component: {fileID: 1452724995}
+  - component: {fileID: 1452724996}
   m_Layer: 9
   m_Name: right_hand
   m_TagString: Untagged
@@ -1613,6 +1646,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &1452724996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452724993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3553de4ebdb6b489e450e426b14e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasWeapon: 0
+  weaponBroken: 0
+  weapon: {fileID: 991128785}
 --- !u!1 &1456790307
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1807,10 @@ MonoBehaviour:
   leftHand: {fileID: 171285092}
   rightFoot: {fileID: 976241003}
   leftFoot: {fileID: 1693700098}
+  rightHandSlot: {fileID: 1452724996}
+  leftHandSlot: {fileID: 171285093}
+  rightFootSlot: {fileID: 976241004}
+  leftFootSlot: {fileID: 1693700099}
   rightHandSword: {fileID: 991128785}
   leftHandSword: {fileID: 1343273719}
   rightFootSword: {fileID: 1991412299}
@@ -1835,6 +1887,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693700097}
   - component: {fileID: 1693700098}
+  - component: {fileID: 1693700099}
   m_Layer: 8
   m_Name: left_foot
   m_TagString: Untagged
@@ -1873,6 +1926,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &1693700099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693700096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c3553de4ebdb6b489e450e426b14e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasWeapon: 0
+  weaponBroken: 0
+  weapon: {fileID: 926446758}
 --- !u!1 &1774295141
 GameObject:
   m_ObjectHideFlags: 0
