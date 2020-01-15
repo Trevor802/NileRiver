@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6939430029427642441}
   - component: {fileID: 6939430029427642442}
   - component: {fileID: 6939430029427642437}
+  - component: {fileID: 5950468679619259842}
   m_Layer: 8
   m_Name: sword_pickup
   m_TagString: Untagged
@@ -155,3 +156,15 @@ MonoBehaviour:
   rightFootSword: {fileID: 0}
   leftFootSword: {fileID: 0}
   sword: {fileID: 6939430029427642446}
+--- !u!114 &5950468679619259842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6939430029427642446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39492a88a597af74d99e426614893d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
