@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public List<Collider2D> colliders;
     public float invulnerableTime;
+    public GameObject gameOver;
     
     [SerializeField] private float health;
     [SerializeField] private bool isDead;
@@ -77,6 +78,7 @@ public class Health : MonoBehaviour
 
     void Dying()
     {
+        gameOver.GetComponent<UIFadeIO>().StartFadeIn();
         Debug.Log("Game Over");
     }
 }
