@@ -3628,6 +3628,7 @@ GameObject:
   - component: {fileID: 2218768279818033376}
   - component: {fileID: 2218768279818033388}
   - component: {fileID: 2218768279818033378}
+  - component: {fileID: 2218768279818033379}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Player
@@ -3649,6 +3650,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: {fileID: 6518053355302878256}
   swingSpeed: 0.03
+--- !u!114 &2218768279818033379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218768279818033377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841d160929fad50449fa7f45015cd335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headCut: 0
+  rightArmCut: 0
+  leftArmCut: 0
+  rightLegCut: 0
+  leftLegCut: 0
+  rightArm: {fileID: 7598481836602183333}
+  rightArm_hand: {fileID: 2218768280261796726}
+  leftArm: {fileID: 8768893499704140704}
+  leftArm_hand: {fileID: 2218768279244892693}
+  rightLeg: {fileID: 8504305030558752312}
+  rightLeg_foot: {fileID: 2218768279513477406}
+  leftLeg: {fileID: 3889053601352683903}
+  leftLeg_foot: {fileID: 2218768281027584119}
+  head: {fileID: 2218768279127802423}
 --- !u!50 &2218768279818033388
 Rigidbody2D:
   serializedVersion: 4
