@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class UIFadeIO : MonoBehaviour
 {
+    public float fadingSpeed;
+
     bool startFading;
-    float fadingSpeed;
-    
+
     private void Start()
     {
         Color color = this.GetComponent<Image>().color;
@@ -21,7 +22,8 @@ public class UIFadeIO : MonoBehaviour
 
     public void StartFadeIn()
     {
-        this.GetComponent<Image>().CrossFadeAlpha(0.1f, 2f, false);
+        Color color = this.GetComponent<Image>().color;
+        this.GetComponent<Image>().color = new Color(color.r, color.g, color.b, 1f);
     }
 
     public void StartFadeOut()

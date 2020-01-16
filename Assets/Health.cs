@@ -31,6 +31,12 @@ public class Health : MonoBehaviour
         {
             timer -= Time.deltaTime;
         }
+        if (health <= 0f)
+        {
+            health = 0;
+            Dead = true;
+            Dying();
+        }
     }
     public void GetDamage(Collider2D i_collider)
     {
@@ -84,12 +90,7 @@ public class Health : MonoBehaviour
         //health -= dmg;
         timer = invulnerableTime;
         Debug.Log("Player get " + dmg + " damage");
-        if(health <= 0f)
-        {
-            health = 0;
-            Dead = true;
-            Dying();
-        }
+        
     }
 
     public bool Dead
