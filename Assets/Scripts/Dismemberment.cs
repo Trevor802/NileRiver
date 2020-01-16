@@ -50,7 +50,7 @@ public class Dismemberment : MonoBehaviour
             head.transform.parent = null;
 
             Rigidbody2D head_rigid = head.AddComponent<Rigidbody2D>();
-            head_rigid.gravityScale = 0.5f;
+            head_rigid.gravityScale = 0.7f;
 
             head_rigid.simulated = true;
             head_rigid.AddForce(head.transform.up * thrust, ForceMode2D.Impulse);
@@ -63,7 +63,7 @@ public class Dismemberment : MonoBehaviour
             rightArm.transform.parent = null;
 
             Rigidbody2D rightArm_rigid = rightArm.AddComponent<Rigidbody2D>();
-            rightArm_rigid.gravityScale = 0.5f;
+            rightArm_rigid.gravityScale = 0.7f;
 
             rightArm_rigid.simulated = true;
             rightArm_rigid.AddForce(rightArm.transform.up * thrust, ForceMode2D.Impulse);
@@ -77,7 +77,7 @@ public class Dismemberment : MonoBehaviour
             leftArm.transform.parent = null;
 
             Rigidbody2D leftArm_rigid = leftArm.AddComponent<Rigidbody2D>();
-            leftArm_rigid.gravityScale = 0.5f;
+            leftArm_rigid.gravityScale = 0.7f;
 
             leftArm_rigid.simulated = true;
             leftArm_rigid.AddForce(leftArm.transform.up * thrust, ForceMode2D.Impulse);
@@ -91,7 +91,7 @@ public class Dismemberment : MonoBehaviour
             rightLeg.transform.parent = null;
 
             Rigidbody2D rightLeg_rigid = rightLeg.AddComponent<Rigidbody2D>();
-            rightLeg_rigid.gravityScale = 0.5f;
+            rightLeg_rigid.gravityScale = 0.7f;
 
             rightLeg_rigid.simulated = true;
             rightLeg_rigid.AddForce(rightLeg.transform.up * thrust, ForceMode2D.Impulse);
@@ -105,7 +105,7 @@ public class Dismemberment : MonoBehaviour
             leftLeg.transform.parent = null;
 
             Rigidbody2D leftLeg_rigid = leftLeg.AddComponent<Rigidbody2D>();
-            leftLeg_rigid.gravityScale = 0.5f;
+            leftLeg_rigid.gravityScale = 0.7f;
 
             leftLeg_rigid.simulated = true;
             leftLeg_rigid.AddForce(leftLeg.transform.up * thrust, ForceMode2D.Impulse);
