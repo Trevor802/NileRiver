@@ -6,6 +6,9 @@ public class Health : MonoBehaviour
 {
     public List<Collider2D> colliders;
     public float invulnerableTime;
+    public Dismemberment dismemberment;
+
+    public BoxCollider2D rightArm;
     
     [SerializeField] private float health;
     [SerializeField] private bool isDead;
@@ -47,12 +50,19 @@ public class Health : MonoBehaviour
         if(i_collider.GetType() == typeof(BoxCollider2D))
         {
             dmg = 10;
+            health -= dmg;
+            if(health <= 0)
+            {
+
+            }
         }
         else if(i_collider.GetType() == typeof(CircleCollider2D))
         {
             dmg = 10000;
+            dismemberment.headCut = true;
+            health -= dmg;
         }
-        health -= dmg;
+        //health -= dmg;
         timer = invulnerableTime;
         Debug.Log("Player get " + dmg + " damage");
         if(health <= 0f)
