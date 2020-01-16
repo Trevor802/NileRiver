@@ -8,7 +8,10 @@ public class Health : MonoBehaviour
     public float invulnerableTime;
     public Dismemberment dismemberment;
 
-    public BoxCollider2D rightArm;
+    public BoxCollider2D rightUpperArm;
+    public BoxCollider2D leftUpperArm;
+    public BoxCollider2D rightUpperLeg;
+    public BoxCollider2D leftUpperLeg;
     
     [SerializeField] private float health;
     [SerializeField] private bool isDead;
@@ -53,7 +56,22 @@ public class Health : MonoBehaviour
             health -= dmg;
             if(health <= 0)
             {
-
+                if (i_collider == rightUpperArm)
+                {
+                    dismemberment.rightArmCut = true;
+                }
+                else if (i_collider == leftUpperArm)
+                {
+                    dismemberment.leftArmCut = true;
+                }
+                else if (i_collider == rightUpperLeg)
+                {
+                    dismemberment.rightLegCut = true;
+                }
+                else if (i_collider == leftUpperLeg)
+                {
+                    dismemberment.leftLegCut = true;
+                }
             }
         }
         else if(i_collider.GetType() == typeof(CircleCollider2D))
