@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
     public float invulnerableTime;
     public GameObject gameOver;
     public Dismemberment dismemberment;
+    public Rigidbody2D rigid;
 
     public BoxCollider2D rightUpperArm;
     public BoxCollider2D leftUpperArm;
@@ -64,6 +65,13 @@ public class Health : MonoBehaviour
             health -= dmg;
             if(health <= 0)
             {
+                if (isEnemy)
+                {
+                    if (rigid)
+                    {
+                        rigid.bodyType = RigidbodyType2D.Dynamic;
+                    }
+                }
                 if (i_collider == rightUpperArm)
                 {
                     dismemberment.rightArmCut = true;
