@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public List<Collider2D> colliders;
     public float invulnerableTime;
@@ -13,9 +13,8 @@ public class Health : MonoBehaviour
     public BoxCollider2D leftUpperArm;
     public BoxCollider2D rightUpperLeg;
     public BoxCollider2D leftUpperLeg;
-    
+
     public float health;
-    public bool isEnemy;
     [SerializeField] private bool isDead;
     private float timer;
     // Start is called before the first frame update
@@ -28,11 +27,11 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(timer > 0f)
+        if (timer > 0f)
         {
             timer -= Time.deltaTime;
         }
-        if (health <= 0f && !isEnemy)
+        if (health <= 0f)
         {
             health = 0;
             Dead = true;
@@ -44,9 +43,9 @@ public class Health : MonoBehaviour
         if (timer > 0f)
             return;
         bool colliderNotContained = true;
-        foreach(Collider2D collider in colliders)
+        foreach (Collider2D collider in colliders)
         {
-            if(i_collider == collider)
+            if (i_collider == collider)
             {
                 Debug.Log(collider.name);
                 colliderNotContained = false;
@@ -58,11 +57,11 @@ public class Health : MonoBehaviour
         float dmg = 0;
 
 
-        if(i_collider.GetType() == typeof(BoxCollider2D))
+        if (i_collider.GetType() == typeof(BoxCollider2D))
         {
             dmg = 10;
             health -= dmg;
-            if(health <= 0)
+            if (health <= 0)
             {
                 if (i_collider == rightUpperArm)
                 {
@@ -82,7 +81,7 @@ public class Health : MonoBehaviour
                 }
             }
         }
-        else if(i_collider.GetType() == typeof(CircleCollider2D))
+        else if (i_collider.GetType() == typeof(CircleCollider2D))
         {
             dmg = 10000;
             dismemberment.headCut = true;
@@ -91,7 +90,7 @@ public class Health : MonoBehaviour
         //health -= dmg;
         timer = invulnerableTime;
         //Debug.Log("Player get " + dmg + " damage");
-        
+
     }
 
     public bool Dead
@@ -109,6 +108,6 @@ public class Health : MonoBehaviour
     void Dying()
     {
         gameOver.GetComponent<UIFadeIO>().StartFadeIn();
-        Debug.Log("Game Over");
+        
     }
 }
