@@ -4,20 +4,49 @@ using UnityEngine;
 
 public class Friction : MonoBehaviour
 {
-    private Rigidbody2D m_Rigidbody2D;
+    public Vector2 LockPosition;
+    public bool Locked;
+    public bool Hold;
+
+    private SpriteRenderer m_Icon;
+    private Color m_InitColor;
 
     private void Awake()
     {
-        m_Rigidbody2D = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+        m_Icon = GetComponent<SpriteRenderer>();
+        m_InitColor = m_Icon.color;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void Update()
+    {
+        if (Hold)
+            SetIconColor(Color.green);
+        else if (Locked)
+            SetIconColor(Color.red);
+        else
+            SetIconColor(m_InitColor);
+                
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 10)
         {
-            Debug.Log("shit");
-            m_Rigidbody2D.AddForceAtPosition(collision.relativeVelocity * -500, transform.position);
+            Locked = true;
+            LockPosition = transform.position;
         }
-            
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10)
+        {
+            Locked = false;
+        }
+    }
+
+    public void SetIconColor(Color i_Color)
+    {
+        m_Icon.color = i_Color;
     }
 }

@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 6205912056641866582}
   - component: {fileID: 5239615205740325053}
   - component: {fileID: 5239615205740325052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sword_lh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,6 +996,7 @@ MonoBehaviour:
   invulnerableTime: 0
   gameOver: {fileID: 0}
   dismemberment: {fileID: 5797284474144868554}
+  rigid: {fileID: 0}
   rightUpperArm: {fileID: 2762064980401847403}
   leftUpperArm: {fileID: 7142711463284973290}
   rightUpperLeg: {fileID: 1839958604418907496}
