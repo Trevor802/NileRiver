@@ -61,39 +61,39 @@ public class Health : MonoBehaviour
 
         if(i_collider.GetType() == typeof(BoxCollider2D))
         {
-            dmg = 10;
+            dmg = 30;
             health -= dmg;
             if(health <= 0)
             {
-                if (isEnemy)
-                {
-                    if (rigid)
-                    {
-                        rigid.bodyType = RigidbodyType2D.Dynamic;
-                    }
-                }
-                if (i_collider == rightUpperArm)
-                {
-                    dismemberment.rightArmCut = true;
-                }
-                else if (i_collider == leftUpperArm)
-                {
-                    dismemberment.leftArmCut = true;
-                }
-                else if (i_collider == rightUpperLeg)
-                {
-                    dismemberment.rightLegCut = true;
-                }
-                else if (i_collider == leftUpperLeg)
-                {
-                    dismemberment.leftLegCut = true;
-                }
+                //if (isEnemy)
+                //{
+                //    if (rigid)
+                //    {
+                //        rigid.bodyType = RigidbodyType2D.Dynamic;
+                //    }
+                //}
+                //if (i_collider == rightUpperArm)
+                //{
+                //    dismemberment.rightArmCut = true;
+                //}
+                //else if (i_collider == leftUpperArm)
+                //{
+                //    dismemberment.leftArmCut = true;
+                //}
+                //else if (i_collider == rightUpperLeg)
+                //{
+                //    dismemberment.rightLegCut = true;
+                //}
+                //else if (i_collider == leftUpperLeg)
+                //{
+                //    dismemberment.leftLegCut = true;
+                //}
             }
         }
         else if(i_collider.GetType() == typeof(CircleCollider2D))
         {
             dmg = 10000;
-            dismemberment.headCut = true;
+            //dismemberment.headCut = true;
             health -= dmg;
         }
         //health -= dmg;
