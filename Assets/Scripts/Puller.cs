@@ -5,9 +5,17 @@ using UnityEngine;
 public class Puller : MonoBehaviour
 {
     public KeyCode InputButton;
+    public char angle1;
+    public char angle2;
     public Friction ForcePoint;
+    public Transform joint1;
+    public Transform joint2;
+    public Transform joint3;
+    public bool isFoot = false;
 
     private RigidbodyConstraints2D m_InitConstraints;
+    private float a1;
+    private float a2;
 
     private void Awake()
     {
@@ -16,6 +24,18 @@ public class Puller : MonoBehaviour
             ForcePoint = GetComponentInChildren<Friction>();
         }
         m_InitConstraints = GetComponent<Rigidbody2D>().constraints;
+        var Vec1 = joint2.position - joint1.position;
+        var Vec2 = joint3.position - joint2.position;
+        if (isFoot)
+        {
+            a1 = Vector3.Angle(Vec1, new Vector3(1, 0, 0));
+            a2 = Vector3.Angle(Vec2, new Vector3(1, 0, 0));
+        }
+        else
+        {
+            a1 = Vector3.Angle(Vec1, new Vector3(0, -1, 0));
+            a2 = Vector3.Angle(Vec2, new Vector3(0, -1, 0));
+        }
     }
 
     private void Update()
