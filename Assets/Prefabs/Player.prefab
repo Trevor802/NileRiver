@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2365195588846910781}
   - component: {fileID: 6142719292816610934}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LeftFeet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 2508187871301909997}
   - component: {fileID: 8328985117696855322}
   m_Layer: 0
-  m_Name: LeftArm
+  m_Name: LeftArm_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -200,7 +200,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70cf8b222ce7a2e47be82098cd5d198d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff673b7a6f597c144867a9b12a5e7069, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -293,6 +293,7 @@ GameObject:
   - component: {fileID: 297794438393299586}
   - component: {fileID: 4632318585760719073}
   - component: {fileID: 5909500484802277304}
+  - component: {fileID: 5796668764219887764}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -354,6 +355,30 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0, y: -3.8}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &5796668764219887764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800866264055521874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0bd9e8c6ba90d45ac066a29ee82dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliders: []
+  invulnerableTime: 0
+  gameOver: {fileID: 0}
+  dismemberment: {fileID: 0}
+  rigid: {fileID: 4632318585760719073}
+  rightUpperArm: {fileID: 0}
+  leftUpperArm: {fileID: 0}
+  rightUpperLeg: {fileID: 0}
+  leftUpperLeg: {fileID: 0}
+  health: 100
+  isEnemy: 0
+  isDead: 0
 --- !u!1 &1191322381042173965
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +394,7 @@ GameObject:
   - component: {fileID: 1120755712101861273}
   - component: {fileID: 6779305186713333443}
   m_Layer: 0
-  m_Name: RightFeet
+  m_Name: RightLeg_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,7 +453,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: 56d17ef255c871f44bae186c2ae83572, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8160ce66eadd32a4689286087c013fcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -522,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee572cd1f9d2482898c6f310381e5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputButton: 337
+  InputButton: 97
   ForcePoint: {fileID: 0}
 --- !u!1 &1815607994902151171
 GameObject:
@@ -538,7 +563,7 @@ GameObject:
   - component: {fileID: 2421865432556117216}
   - component: {fileID: 6399534229180163563}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,7 +691,7 @@ GameObject:
   - component: {fileID: 9174159904390112651}
   - component: {fileID: 6033812611332597202}
   m_Layer: 0
-  m_Name: RightHand
+  m_Name: RightArm_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,7 +750,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -2
-  m_Sprite: {fileID: 21300000, guid: acfa88298d70c5f498b741a977cb099e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cdaa05686e7dee045826bdf20ed82098, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -819,7 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee572cd1f9d2482898c6f310381e5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputButton: 335
+  InputButton: 119
   ForcePoint: {fileID: 0}
 --- !u!1 &2775972510561961978
 GameObject:
@@ -895,8 +920,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ae4ff3e67671ff74eaa474f426afab42, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: c06571bc19ebfbb42abfc1082d76e6f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1026,7 +1051,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 57a653f890ca14c9aacd6ca6e23695ed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ddc8413de5a32b847831a73e54336218, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1112,7 +1137,7 @@ GameObject:
   - component: {fileID: 7209814832292366987}
   - component: {fileID: 413265466534623454}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1239,7 +1264,7 @@ GameObject:
   - component: {fileID: 3052778948032425223}
   - component: {fileID: 1184867023131247817}
   m_Layer: 0
-  m_Name: LeftLeg
+  m_Name: LeftLeg_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,7 +1323,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 95e35cda5d08e724da97e9efb51e48bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 027b2819ab4df5f4aa3d759b6e40131f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1394,7 +1419,7 @@ GameObject:
   - component: {fileID: 7620870230100728581}
   - component: {fileID: 872099493886166767}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RightFeet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1522,7 +1547,7 @@ GameObject:
   - component: {fileID: 7494204830083443337}
   - component: {fileID: 602149722711546815}
   m_Layer: 0
-  m_Name: LeftFeet
+  m_Name: LeftLeg_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1581,7 +1606,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 096a61dd0ac974f4783d19c2b876bbee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 75955079e87a3bd4fa5aa376094f2e90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1675,7 +1700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee572cd1f9d2482898c6f310381e5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputButton: 336
+  InputButton: 115
   ForcePoint: {fileID: 0}
 --- !u!1 &5712687855316056143
 GameObject:
@@ -1692,7 +1717,7 @@ GameObject:
   - component: {fileID: 2625559958226458362}
   - component: {fileID: 4432226646537055172}
   m_Layer: 0
-  m_Name: LeftHand
+  m_Name: LeftArm_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1751,7 +1776,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 95f85044d4fd08b4f98d569d1b8b096a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a318fc7924aaf764c8449a2a8c90f9b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1845,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee572cd1f9d2482898c6f310381e5f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputButton: 334
+  InputButton: 113
   ForcePoint: {fileID: 0}
 --- !u!1 &5810875617330997726
 GameObject:
@@ -1922,7 +1947,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 67f07a7d5914b614a90409fac167f295, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd80e5f916ba6c1408116879d4e0c962, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2012,7 +2037,7 @@ GameObject:
   - component: {fileID: 1568517031837318990}
   - component: {fileID: 326978651683745494}
   m_Layer: 0
-  m_Name: RightLeg
+  m_Name: RightLeg_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2071,7 +2096,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be5c4993b9c944244a10610a33cb83b6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37b34a349d1d57e449ee98e078bc1386, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2167,7 +2192,7 @@ GameObject:
   - component: {fileID: 7917791723921056932}
   - component: {fileID: 6194284992606161381}
   m_Layer: 0
-  m_Name: RightArm
+  m_Name: RightArm_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2226,7 +2251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: aa03d1fdd55afd4419fc3506ceec1905, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ba0123922e307d449aad4987083825b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2385,6 +2410,6 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
