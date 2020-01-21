@@ -59,12 +59,17 @@ public class Health : MonoBehaviour
         float dmg = 0;
 
 
-        if(i_collider.GetType() == typeof(BoxCollider2D))
+        if(i_collider.GetType() == typeof(PolygonCollider2D))
         {
             dmg = 30;
+            if (i_collider.CompareTag("Head"))
+            {
+                dmg = 10000;
+            }
             health -= dmg;
             if(health <= 0)
             {
+                Debug.Log("Enemy dead");
                 //if (isEnemy)
                 //{
                 //    if (rigid)
@@ -90,12 +95,12 @@ public class Health : MonoBehaviour
                 //}
             }
         }
-        else if(i_collider.GetType() == typeof(CircleCollider2D))
-        {
-            dmg = 10000;
-            //dismemberment.headCut = true;
-            health -= dmg;
-        }
+        //else if(i_collider.GetType() == typeof(CircleCollider2D))
+        //{
+        //    dmg = 10000;
+        //    //dismemberment.headCut = true;
+        //    health -= dmg;
+        //}
         //health -= dmg;
         timer = invulnerableTime;
         //Debug.Log("Player get " + dmg + " damage");
