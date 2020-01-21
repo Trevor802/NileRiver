@@ -982,12 +982,12 @@ MonoBehaviour:
   - {fileID: 8724312538329811858}
   invulnerableTime: 3
   gameOver: {fileID: 0}
-  dismemberment: {fileID: 0}
-  rigid: {fileID: 0}
-  rightUpperArm: {fileID: 0}
-  leftUpperArm: {fileID: 0}
-  rightUpperLeg: {fileID: 0}
-  leftUpperLeg: {fileID: 0}
+  dismemberment: {fileID: 9201467723121416842}
+  rigid: {fileID: 2976601641653545183}
+  rightUpperArm: {fileID: 4664596348232068392}
+  leftUpperArm: {fileID: 3391086003389069623}
+  rightUpperLeg: {fileID: 1922717152992127151}
+  leftUpperLeg: {fileID: 8271905727940358849}
   health: 100
   isEnemy: 1
   isDead: 0

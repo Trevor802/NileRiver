@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public bool isEnemyWeapon;
-    public Health health;
+    //public Health health;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

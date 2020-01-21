@@ -317,6 +317,8 @@ GameObject:
   - component: {fileID: 297794438393299586}
   - component: {fileID: 4632318585760719073}
   - component: {fileID: 5909500484802277304}
+  - component: {fileID: 4718610914964813861}
+  - component: {fileID: 1537538937894941091}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -378,6 +380,66 @@ FixedJoint2D:
   m_ConnectedAnchor: {x: 0, y: -4.78}
   m_DampingRatio: 0
   m_Frequency: 0
+--- !u!114 &4718610914964813861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800866264055521874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd0bd9e8c6ba90d45ac066a29ee82dc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colliders:
+  - {fileID: 4174919670249936883}
+  - {fileID: 4424920505569473576}
+  - {fileID: 1142870513860083925}
+  - {fileID: 2611766972136194722}
+  - {fileID: 6891122491560324332}
+  - {fileID: 2039270922248907004}
+  - {fileID: 7432524214695918768}
+  - {fileID: 3451937632599075040}
+  - {fileID: 1385521258636850965}
+  - {fileID: 7156069788139657967}
+  invulnerableTime: 3
+  gameOver: {fileID: 0}
+  dismemberment: {fileID: 1537538937894941091}
+  rigid: {fileID: 4632318585760719073}
+  rightUpperArm: {fileID: 4424920505569473576}
+  leftUpperArm: {fileID: 2611766972136194722}
+  rightUpperLeg: {fileID: 7432524214695918768}
+  leftUpperLeg: {fileID: 1385521258636850965}
+  health: 100
+  isEnemy: 0
+  isDead: 0
+--- !u!114 &1537538937894941091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800866264055521874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841d160929fad50449fa7f45015cd335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headCut: 0
+  rightArmCut: 0
+  leftArmCut: 0
+  rightLegCut: 0
+  leftLegCut: 0
+  rightArm: {fileID: 6281196522233230946}
+  rightArm_hand: {fileID: 2412242294548753828}
+  leftArm: {fileID: 691227463576845574}
+  leftArm_hand: {fileID: 5712687855316056143}
+  rightLeg: {fileID: 5839058174710935760}
+  rightLeg_foot: {fileID: 1191322381042173965}
+  leftLeg: {fileID: 4136830214659328562}
+  leftLeg_foot: {fileID: 5532507383601533529}
+  head: {fileID: 3409080356200379017}
 --- !u!1 &1191322381042173965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,7 +1278,7 @@ GameObject:
   - component: {fileID: 2039270922248907004}
   m_Layer: 9
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

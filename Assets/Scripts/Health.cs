@@ -10,10 +10,10 @@ public class Health : MonoBehaviour
     public Dismemberment dismemberment;
     public Rigidbody2D rigid;
 
-    public BoxCollider2D rightUpperArm;
-    public BoxCollider2D leftUpperArm;
-    public BoxCollider2D rightUpperLeg;
-    public BoxCollider2D leftUpperLeg;
+    public PolygonCollider2D rightUpperArm;
+    public PolygonCollider2D leftUpperArm;
+    public PolygonCollider2D rightUpperLeg;
+    public PolygonCollider2D leftUpperLeg;
     
     public float health;
     public bool isEnemy;
@@ -64,35 +64,36 @@ public class Health : MonoBehaviour
             dmg = 30;
             if (i_collider.CompareTag("Head"))
             {
+                dismemberment.headCut = true;
                 dmg = 10000;
             }
             health -= dmg;
             if(health <= 0)
             {
-                Debug.Log("Enemy dead");
-                //if (isEnemy)
-                //{
-                //    if (rigid)
-                //    {
-                //        rigid.bodyType = RigidbodyType2D.Dynamic;
-                //    }
-                //}
-                //if (i_collider == rightUpperArm)
-                //{
-                //    dismemberment.rightArmCut = true;
-                //}
-                //else if (i_collider == leftUpperArm)
-                //{
-                //    dismemberment.leftArmCut = true;
-                //}
-                //else if (i_collider == rightUpperLeg)
-                //{
-                //    dismemberment.rightLegCut = true;
-                //}
-                //else if (i_collider == leftUpperLeg)
-                //{
-                //    dismemberment.leftLegCut = true;
-                //}
+                //Debug.Log("Enemy dead");
+                if (isEnemy)
+                {
+                    if (rigid)
+                    {
+                        rigid.bodyType = RigidbodyType2D.Dynamic;
+                    }
+                }
+                if (i_collider == rightUpperArm)
+                {
+                    dismemberment.rightArmCut = true;
+                }
+                else if (i_collider == leftUpperArm)
+                {
+                    dismemberment.leftArmCut = true;
+                }
+                else if (i_collider == rightUpperLeg)
+                {
+                    dismemberment.rightLegCut = true;
+                }
+                else if (i_collider == leftUpperLeg)
+                {
+                    dismemberment.leftLegCut = true;
+                }
             }
         }
         //else if(i_collider.GetType() == typeof(CircleCollider2D))

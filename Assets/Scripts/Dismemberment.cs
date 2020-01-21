@@ -31,6 +31,7 @@ public class Dismemberment : MonoBehaviour
     private bool leftLeg_flew;
 
     public GameObject head;
+    public Rigidbody2D headRigid;
     //public Rigidbody2D head_rigid;
     private bool head_flew;
 
@@ -42,18 +43,19 @@ public class Dismemberment : MonoBehaviour
     void Start()
     {
         //rightLeg_rigid.IsSleeping();
+        Debug.Log(head.GetComponent<Rigidbody2D>());
     }
     void Update()
     {
         if (headCut == true && head_flew == false)
         {
             head.transform.parent = null;
+            
+            //Rigidbody2D head_rigid = head.AddComponent<Rigidbody2D>();
+            headRigid.gravityScale = 0.7f;
 
-            Rigidbody2D head_rigid = head.AddComponent<Rigidbody2D>();
-            head_rigid.gravityScale = 0.7f;
-
-            head_rigid.simulated = true;
-            head_rigid.AddForce(head.transform.up * thrust, ForceMode2D.Impulse);
+            //head_rigid.simulated = true;
+            headRigid.AddForce(head.transform.up * thrust, ForceMode2D.Impulse);
 
             head_flew = true;
         }
