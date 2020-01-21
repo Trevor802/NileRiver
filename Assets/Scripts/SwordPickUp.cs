@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : MonoBehaviour
+public class SwordPickUp : MonoBehaviour
 {
     public CircleCollider2D rightHand;
     public CircleCollider2D leftHand;
@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //print("on enter");
         if(collision == rightHand && rightHandSlot.hasWeapon == false)
         {
             rightHandSword.SetActive(true);
