@@ -67,7 +67,7 @@ public class Dismemberment : MonoBehaviour
 
             rightArm_rigid.simulated = true;
             rightArm_rigid.AddForce(rightArm.transform.up * thrust, ForceMode2D.Impulse);
-            rightArm_hand.SetActive(false);
+            //rightArm_hand.SetActive(false);
 
             rightArm_flew = true;
         }
@@ -81,7 +81,7 @@ public class Dismemberment : MonoBehaviour
 
             leftArm_rigid.simulated = true;
             leftArm_rigid.AddForce(leftArm.transform.up * thrust, ForceMode2D.Impulse);
-            leftArm_hand.SetActive(false);
+            //leftArm_hand.SetActive(false);
 
             leftArm_flew = true;
         }
@@ -95,7 +95,7 @@ public class Dismemberment : MonoBehaviour
 
             rightLeg_rigid.simulated = true;
             rightLeg_rigid.AddForce(rightLeg.transform.up * thrust, ForceMode2D.Impulse);
-            rightLeg_foot.SetActive(false);
+            //rightLeg_foot.SetActive(false);
 
             rightLeg_flew = true;
         }
@@ -109,7 +109,7 @@ public class Dismemberment : MonoBehaviour
 
             leftLeg_rigid.simulated = true;
             leftLeg_rigid.AddForce(leftLeg.transform.up * thrust, ForceMode2D.Impulse);
-            leftLeg_foot.SetActive(false);
+            //leftLeg_foot.SetActive(false);
 
             leftLeg_flew = true;
         }
