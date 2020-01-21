@@ -61,7 +61,7 @@ public class Health : MonoBehaviour
 
         if(i_collider.GetType() == typeof(BoxCollider2D))
         {
-            dmg = 10;
+            dmg = 30;
             health -= dmg;
             if(health <= 0)
             {
