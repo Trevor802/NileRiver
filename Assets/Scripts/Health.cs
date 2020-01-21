@@ -80,18 +80,22 @@ public class Health : MonoBehaviour
                 }
                 if (i_collider == rightUpperArm)
                 {
+                    Debug.Log("???");
                     dismemberment.rightArmCut = true;
                 }
                 else if (i_collider == leftUpperArm)
                 {
+                    Debug.Log("???");
                     dismemberment.leftArmCut = true;
                 }
                 else if (i_collider == rightUpperLeg)
                 {
+                    Debug.Log("???");
                     dismemberment.rightLegCut = true;
                 }
                 else if (i_collider == leftUpperLeg)
                 {
+                    Debug.Log("???");
                     dismemberment.leftLegCut = true;
                 }
             }
