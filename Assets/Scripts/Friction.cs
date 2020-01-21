@@ -17,6 +17,15 @@ public class Friction : MonoBehaviour
         m_InitColor = m_Icon.color;
     }
 
+    private float GetLimbAngle(GameObject from, GameObject to)
+    {
+        Vector2 dir =  to.transform.position - from.transform.position;
+        float angle = Vector2.Angle(Vector2.right, dir);
+        if (Vector2.Dot(Vector2.up, dir) < 0)
+            angle = -angle;
+        return angle;
+    }
+
     private void Update()
     {
         if (Hold)
