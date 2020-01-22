@@ -197,8 +197,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ff673b7a6f597c144867a9b12a5e7069, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -247,7 +247,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.781, y: 1.2390003}
+  m_ConnectedAnchor: {x: -0.7810001, y: 1.2389998}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -380,7 +380,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -4.78}
+  m_ConnectedAnchor: {x: 0.000000026077032, y: -4.78}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!114 &4718610914964813861
@@ -415,7 +415,7 @@ MonoBehaviour:
   rightUpperLeg: {fileID: 7432524214695918768}
   leftUpperLeg: {fileID: 1385521258636850965}
   enemySound: {fileID: 0}
-  weaponSound: {fileID: 0}
+  weaponSound: {fileID: 2078193995726280530}
   health: 100
   isEnemy: 0
   isDead: 0
@@ -457,7 +457,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.538
+  m_Volume: 0.519
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -645,8 +645,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 8160ce66eadd32a4689286087c013fcd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -695,7 +695,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.19999999, y: -1.151}
+  m_ConnectedAnchor: {x: 0.19999994, y: -1.1510004}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -717,13 +717,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 115
-  input1: 0
-  input2: 0
+  input1: 69
+  input2: 70
   ForcePoint: {fileID: 964379704051594416}
-  joint1: {fileID: 0}
-  joint2: {fileID: 0}
-  joint3: {fileID: 0}
-  isFoot: 0
+  joint1: {fileID: 7118637213868684524}
+  joint2: {fileID: 8582124687814445724}
+  joint3: {fileID: 7021021092956557127}
+  isFoot: 1
 --- !u!60 &3451937632599075040
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1003,8 +1003,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: cdaa05686e7dee045826bdf20ed82098, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1053,7 +1053,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.405, y: -0.0089998245}
+  m_ConnectedAnchor: {x: 1.4050001, y: -0.008999355}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1075,12 +1075,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 119
-  input1: 0
-  input2: 0
+  input1: 65
+  input2: 66
   ForcePoint: {fileID: 4034749463191441192}
-  joint1: {fileID: 0}
-  joint2: {fileID: 0}
-  joint3: {fileID: 0}
+  joint1: {fileID: 4608831757220197736}
+  joint2: {fileID: 2376781525409004680}
+  joint3: {fileID: 1114306200082572275}
   isFoot: 0
 --- !u!60 &1142870513860083925
 PolygonCollider2D:
@@ -1218,8 +1218,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: eec97a8ce1c7cea4b9dc05a89290075a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1304,8 +1304,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c06571bc19ebfbb42abfc1082d76e6f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1476,8 +1476,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ddc8413de5a32b847831a73e54336218, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1526,7 +1526,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 2.1160002}
+  m_ConnectedAnchor: {x: 0.00000017508864, y: 2.116}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1789,8 +1789,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 027b2819ab4df5f4aa3d759b6e40131f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1839,7 +1839,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.2, y: -1.1500001}
+  m_ConnectedAnchor: {x: -0.20000002, y: -1.1500001}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1958,8 +1958,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c8b1d9ccb5a5a6243ab80cd9ac72643b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2172,8 +2172,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 75955079e87a3bd4fa5aa376094f2e90, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2244,13 +2244,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 97
-  input1: 0
-  input2: 0
+  input1: 71
+  input2: 72
   ForcePoint: {fileID: 7443342147718846108}
-  joint1: {fileID: 0}
-  joint2: {fileID: 0}
-  joint3: {fileID: 0}
-  isFoot: 0
+  joint1: {fileID: 8035802644793462131}
+  joint2: {fileID: 5335347624049273722}
+  joint3: {fileID: 850438927594940250}
+  isFoot: 1
 --- !u!60 &7156069788139657967
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2591,8 +2591,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a318fc7924aaf764c8449a2a8c90f9b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2641,7 +2641,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.41, y: -0.020000458}
+  m_ConnectedAnchor: {x: -1.4099998, y: -0.02000045}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2663,12 +2663,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 113
-  input1: 0
-  input2: 0
+  input1: 67
+  input2: 68
   ForcePoint: {fileID: 196953296456640562}
-  joint1: {fileID: 0}
-  joint2: {fileID: 0}
-  joint3: {fileID: 0}
+  joint1: {fileID: 2480240992362923846}
+  joint2: {fileID: 655658210524076958}
+  joint3: {fileID: 8837090156656155823}
   isFoot: 0
 --- !u!60 &6891122491560324332
 PolygonCollider2D:
@@ -2815,8 +2815,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: cd80e5f916ba6c1408116879d4e0c962, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2865,7 +2865,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0.13999987}
+  m_ConnectedAnchor: {x: -0.000000032945536, y: 0.14000028}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!60 &4174919670249936883
@@ -2996,8 +2996,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 37b34a349d1d57e449ee98e078bc1386, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3046,7 +3046,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.36, y: -1.3}
+  m_ConnectedAnchor: {x: 0.36000004, y: -1.3}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3354,8 +3354,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ba0123922e307d449aad4987083825b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3404,7 +3404,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.818, y: 1.2589998}
+  m_ConnectedAnchor: {x: 0.818, y: 1.258999}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3528,8 +3528,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 421017d5be3e4a24db84c7d1673a536b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3972,8 +3972,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -314951417
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 39dd45bf9cdca9a4f9898f8756d211e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
