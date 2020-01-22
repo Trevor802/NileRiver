@@ -24,7 +24,7 @@ public class PlayerSound : MonoBehaviour
         if(delay <= 0f)
         {
             soundToPlay = Random.Range(0, 3);
-            print(soundToPlay);
+            //print(soundToPlay);
             if(soundToPlay == 0)
             {
                 playerAudio.PlayOneShot(playerSound1);

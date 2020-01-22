@@ -16,6 +16,7 @@ public class Health : MonoBehaviour
     public PolygonCollider2D leftUpperLeg;
 
     public EnemySound enemySound;
+    public WeaponSound weaponSound;
     
     public float health;
     public bool isEnemy;
@@ -63,18 +64,20 @@ public class Health : MonoBehaviour
 
         if(i_collider.GetType() == typeof(PolygonCollider2D))
         {
+            weaponSound.PlayWeaponHitSound();
             dmg = 30;
             if (i_collider.CompareTag("Head"))
             {
                 dismemberment.headCut = true;
                 dmg = 10000;
             }
-            if (isEnemy)
+            
+            health -= dmg;
+            if (isEnemy && health > 0)
             {
                 enemySound.playHurtSound();
             }
-            health -= dmg;
-            if(health <= 0)
+            if (health <= 0)
             {
                 //Debug.Log("Enemy dead");
                 if (isEnemy)
