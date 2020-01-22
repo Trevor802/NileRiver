@@ -22,7 +22,7 @@ public class WinFailEvent : MonoBehaviour
     public void EnemyKilledEvt()
     {
         enemyCount--;
-        if (enemyCount <= 0)
+        if (enemyCount <= 0 && !GameObject.FindGameObjectWithTag("Player").GetComponent<Health>().isDead)
         {
             PlayerWins();
         }

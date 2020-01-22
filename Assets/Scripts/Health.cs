@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     
     public float health;
     public bool isEnemy;
-    [SerializeField] private bool isDead;
+    public bool isDead;
     private float timer;
     // Start is called before the first frame update
     void Start()
@@ -81,7 +81,8 @@ public class Health : MonoBehaviour
                 }
                 else
                 {
-                    GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().GameOverScreen();
+                    StartCoroutine("PlayGameOver");
+                    //GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().GameOverScreen();
                 }
 
                 if (i_collider == rightUpperArm)
@@ -130,5 +131,11 @@ public class Health : MonoBehaviour
     {
         //gameOver.GetComponent<UIFadeIO>().StartFadeIn();
         //Debug.Log("Game Over");
+    }
+
+    IEnumerator PlayGameOver()
+    {
+        yield return new WaitForSeconds(2);
+        GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().GameOverScreen();
     }
 }
