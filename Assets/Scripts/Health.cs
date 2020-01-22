@@ -80,9 +80,13 @@ public class Health : MonoBehaviour
             if (health <= 0)
             {
                 //Debug.Log("Enemy dead");
-                if (isEnemy)
+                if (isEnemy && !isDead)
                 {
                     enemySound.playDeadSound();
+                    foreach(Collider2D collider in colliders)
+                    {
+                        collider.enabled = false;
+                    }
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().EnemyKilledEvt();
                     if (rigid)
                     {
