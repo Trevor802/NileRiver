@@ -7,6 +7,8 @@ public class Friction : MonoBehaviour
     public Vector2 LockPosition;
     public bool Locked;
     public bool Hold;
+    public Sprite LockSprite;
+    public Sprite HoldSprite;
 
     private SpriteRenderer m_Icon;
     private Color m_InitColor;
@@ -29,11 +31,21 @@ public class Friction : MonoBehaviour
     private void Update()
     {
         if (Hold)
+        {
+            m_Icon.sprite = HoldSprite;
             SetIconColor(Color.green);
+        }
         else if (Locked)
+        {
+            m_Icon.sprite = LockSprite;
             SetIconColor(Color.red);
+        }
         else
+        {
+            m_Icon.sprite = HoldSprite;
             SetIconColor(m_InitColor);
+        }
+            
                 
     }
 

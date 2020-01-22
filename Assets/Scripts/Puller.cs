@@ -69,6 +69,10 @@ public class Puller : MonoBehaviour
 
     private void AddForce()
     {
+        if (Input.GetKeyDown(InputButton))
+            ForcePoint.Hold = true;
+        if (Input.GetKeyUp(InputButton))
+            ForcePoint.Hold = false;
         if (Input.GetKey(InputButton))
         {
             rb.constraints = m_InitConstraints;
