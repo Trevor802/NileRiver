@@ -931,7 +931,11 @@ GameObject:
   - component: {fileID: 5121987298568529029}
   - component: {fileID: 8005078553494501601}
   - component: {fileID: 4190765586064916227}
+<<<<<<< HEAD
   - component: {fileID: 5828355250092673498}
+=======
+  - component: {fileID: 5358938987231901310}
+>>>>>>> master
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -993,6 +997,10 @@ MonoBehaviour:
   rightUpperLeg: {fileID: 1922717152992127151}
   leftUpperLeg: {fileID: 8271905727940358849}
   enemySound: {fileID: 0}
+<<<<<<< HEAD
+=======
+  weaponSound: {fileID: 0}
+>>>>>>> master
   health: 100
   isEnemy: 1
   isDead: 0
@@ -1180,15 +1188,21 @@ MonoBehaviour:
   enemyAudio: {fileID: 8005078553494501601}
   enemySoundHurt: {fileID: 8300000, guid: 38d06a9b72df36549888cad08f86847f, type: 3}
   enemySoundDie: {fileID: 8300000, guid: 67b91dcee62a0244d8a62d7051f336be, type: 3}
+<<<<<<< HEAD
 --- !u!95 &5828355250092673498
 Animator:
   serializedVersion: 3
+=======
+--- !u!114 &5358938987231901310
+MonoBehaviour:
+>>>>>>> master
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830451090195601644}
   m_Enabled: 1
+<<<<<<< HEAD
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 5bfd95ed8c48dd6428273cd83403405e, type: 2}
   m_CullingMode: 0
@@ -1199,6 +1213,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5e6852d43d4654582903b8055be5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponAudio: {fileID: 8005078553494501601}
+  weaponPickUpSound: {fileID: 8300000, guid: a6435bd4762ba7d4ab3ed12888f6a458, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 746450cd0c79f5f4595535b9a06baf28, type: 3}
+>>>>>>> master
 --- !u!1 &830451090517007179
 GameObject:
   m_ObjectHideFlags: 0

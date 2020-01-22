@@ -321,6 +321,7 @@ GameObject:
   - component: {fileID: 1537538937894941091}
   - component: {fileID: 5273430293734580163}
   - component: {fileID: 6300782341383486499}
+  - component: {fileID: 2078193995726280530}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -413,6 +414,8 @@ MonoBehaviour:
   leftUpperArm: {fileID: 2611766972136194722}
   rightUpperLeg: {fileID: 7432524214695918768}
   leftUpperLeg: {fileID: 1385521258636850965}
+  enemySound: {fileID: 0}
+  weaponSound: {fileID: 0}
   health: 100
   isEnemy: 0
   isDead: 0
@@ -554,6 +557,21 @@ MonoBehaviour:
   playerSound1: {fileID: 8300000, guid: 22420bc54f5fa644495727c548360ddf, type: 3}
   playerSound2: {fileID: 8300000, guid: d3815addc74da064e9028d8f2a1c47b1, type: 3}
   playerSound3: {fileID: 8300000, guid: 493a1651e6154494bb1244d4af4e2fd9, type: 3}
+--- !u!114 &2078193995726280530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800866264055521874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5e6852d43d4654582903b8055be5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponAudio: {fileID: 5273430293734580163}
+  weaponPickUpSound: {fileID: 8300000, guid: a6435bd4762ba7d4ab3ed12888f6a458, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 746450cd0c79f5f4595535b9a06baf28, type: 3}
 --- !u!1 &1191322381042173965
 GameObject:
   m_ObjectHideFlags: 0

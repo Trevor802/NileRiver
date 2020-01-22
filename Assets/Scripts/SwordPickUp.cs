@@ -21,8 +21,11 @@ public class SwordPickUp : MonoBehaviour
 
     public GameObject sword;
 
+    public WeaponSound weaponSound;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        weaponSound.PlayWeaponPickUpSound();
         //print("on enter");
         if(collision == rightHand && rightHandSlot.hasWeapon == false)
         {

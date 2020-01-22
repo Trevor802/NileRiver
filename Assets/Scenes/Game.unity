@@ -760,6 +760,11 @@ PrefabInstance:
       propertyPath: sword
       value: 
       objectReference: {fileID: 665876668}
+    - target: {fileID: 3259284090392794618, guid: 5500b997da371dc43917d3191ab21827,
+        type: 3}
+      propertyPath: weaponSound
+      value: 
+      objectReference: {fileID: 1378248104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5500b997da371dc43917d3191ab21827, type: 3}
 --- !u!1 &665876668 stripped
@@ -1213,6 +1218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5273430293734580163, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.519
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: sword
       value: 
@@ -1592,6 +1602,11 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4718610914964813861, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: weaponSound
+      value: 
+      objectReference: {fileID: 1378248104}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc6a0d781e194523a0d35c62634086d, type: 3}
 --- !u!4 &875003467 stripped
@@ -1753,6 +1768,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1938933640}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1378248104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2078193995726280530, guid: ecc6a0d781e194523a0d35c62634086d,
+    type: 3}
+  m_PrefabInstance: {fileID: 875003466}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5e6852d43d4654582903b8055be5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1432990792 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7021021092956557127, guid: ecc6a0d781e194523a0d35c62634086d,
@@ -2605,6 +2632,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8005078553494501601, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.531
+      objectReference: {fileID: 0}
     - target: {fileID: 830451090195601644, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
         type: 3}
       propertyPath: m_Name
@@ -2670,6 +2702,16 @@ PrefabInstance:
       propertyPath: invulnerableTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4314951599704914069, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
+        type: 3}
+      propertyPath: enemySound
+      value: 
+      objectReference: {fileID: 9201467723121416868}
+    - target: {fileID: 4314951599704914069, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
+        type: 3}
+      propertyPath: weaponSound
+      value: 
+      objectReference: {fileID: 9201467723121416836}
     - target: {fileID: 830451090631461371, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
         type: 3}
       propertyPath: m_IsActive
@@ -2697,3 +2739,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4937b5d66b0e2ff4f999256c17cd6e9d, type: 3}
+--- !u!114 &9201467723121416836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5358938987231901310, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 9201467723121416833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5e6852d43d4654582903b8055be5dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9201467723121416868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4190765586064916227, guid: 4937b5d66b0e2ff4f999256c17cd6e9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 9201467723121416833}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772dda5a51ea06b4798c4568d0e15b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
