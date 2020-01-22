@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Spear : MonoBehaviour
 {
+    public GameObject spearHead;
+    //public GameObject Enemy;
+
     public Rigidbody2D spearHeadRigid;
     public Rigidbody2D spearTailRigid;
     public Transform spearHeadTransform;
@@ -16,17 +19,24 @@ public class Spear : MonoBehaviour
 
     public Animator animator;
 
-    private float thrust = -25f;
+    private float thrust = 35f;
     private Transform originalTransform;
     private Vector3 position;
     private Quaternion rotation;
+    private bool throwed;
     // Start is called before the first frame update
     void Start()
     {
+        throwed = false;
         animator.SetBool("Throw", true);
-        //originalTransform = arrowHeadTransform;
+        spearHead.transform.parent = null;
         position = spearHeadTransform.position;
         rotation = spearHeadTransform.rotation;
+        spearHead.GetComponent<PolygonCollider2D>().enabled = false;
+        throwSpearHead.enabled = false;
+        throwSpearTail.enabled = false;
+        /*
+        //originalTransform = arrowHeadTransform;
 
         //shoots arrow
         spearTailRigid.bodyType = RigidbodyType2D.Dynamic;
@@ -35,12 +45,14 @@ public class Spear : MonoBehaviour
         spearHeadRigid.bodyType = RigidbodyType2D.Dynamic;
         spearHeadRigid.gravityScale = 0.7f;
         spearHeadRigid.AddForce(transform.right * thrust, ForceMode2D.Impulse);
+        */
     }
 
     void Update()
     {
-        if(animator.GetBool("Throw") == false)
+        if(animator.GetBool("Throw") == false && throwed == false)
         {
+            throwed = true;
             enemySpear.enabled = false;
 
             throwSpearHead.enabled = true;
@@ -52,6 +64,8 @@ public class Spear : MonoBehaviour
             spearHeadTransform.position = position;
             spearHeadTransform.rotation = rotation;
 
+            
+
             //shoots arrow
             spearTailRigid.bodyType = RigidbodyType2D.Dynamic;
             spearTailRigid.gravityScale = 0.5f;
@@ -59,11 +73,14 @@ public class Spear : MonoBehaviour
             spearHeadRigid.bodyType = RigidbodyType2D.Dynamic;
             spearHeadRigid.gravityScale = 0.7f;
             spearHeadRigid.AddForce(transform.right * thrust, ForceMode2D.Impulse);
+
+            spearHead.GetComponent<PolygonCollider2D>().enabled = true;
         }
-        else
+        else if(animator.GetBool("Throw") == true && throwed == true)
         {
             enemySpear.enabled = true;
-
+            throwed = false;
+            spearHead.GetComponent<PolygonCollider2D>().enabled = false;
             throwSpearHead.enabled = false;
             throwSpearTail.enabled = false;
         }
