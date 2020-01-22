@@ -5,7 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
-{   
+{
+    public GameObject gameOverScreen;
+    public GameObject winningScreen;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +17,30 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //if(Input.GetKeyDown(KeyCode.Return))
+        //{
+        //    GameOver();
+        //}
+    }
+
+    public void GameOver()
+    {
+        //Debug.Log("Game overing...");
+        gameOverScreen.SetActive(true);
+        if(gameOverScreen)
+        {
+            gameOverScreen.GetComponent<Animator>().SetBool("GameOver", true);
+        }
+    }
+
+    public void WinScreen()
+    {
+        winningScreen.SetActive(true);
+    }
+
+    public void GameOverRestart()
+    {
+        StartCoroutine("RestartGame");
     }
 
     public void GameStart()
@@ -37,5 +62,11 @@ public class UIManager : MonoBehaviour
     public void PlayerWin()
     {
 
+    }
+
+    IEnumerator RestartGame()
+    {
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Game");
     }
 }
