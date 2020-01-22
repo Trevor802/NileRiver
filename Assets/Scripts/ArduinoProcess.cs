@@ -5,13 +5,33 @@ using UnityEngine;
 
 public class ArduinoProcess : MonoBehaviour
 {
+    public static ArduinoProcess instance = null;
+
     SerialPort sp = new SerialPort("COM3", 9600);
-    private int degreeA;
-    private int degreeB;
-    private int degreeC;
-    private int degreeD;
-    private int degreeE;
-    private int degreeF;
+    private float degreeA = 0f;
+    private float degreeB = 0f;
+    private float degreeC = 0f;
+    private float degreeD = 0f;
+    private float degreeE = 0f;
+    private float degreeF = 0f;
+    private float prevA;
+    private float prevB;
+    private float prevC;
+    private float prevD;
+    private float prevE;
+    private float prevF;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -19,47 +39,52 @@ public class ArduinoProcess : MonoBehaviour
         if (!sp.IsOpen)
             sp.Open();
         sp.ReadTimeout = 5;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        prevA = degreeA;
+        prevB = degreeB;
+        prevC = degreeC;
+        prevD = degreeD;
+        prevE = degreeE;
+        prevF = degreeF;
         try
         {
             string inputStr = sp.ReadLine();
             if (inputStr[0] == 'A')
             {
-                degreeA = int.Parse(inputStr.Substring(1, inputStr.Length - 1));
+                degreeA = float.Parse(inputStr.Substring(1, inputStr.Length - 1));
             }
-            if (inputStr[0] == 'B')
+            else if (inputStr[0] == 'B')
             {
-                degreeB = int.Parse(inputStr.Substring(1, inputStr.Length - 1));
+                degreeB = float.Parse(inputStr.Substring(1, inputStr.Length - 1));
             }
-            if (inputStr[0] == 'C')
+            else if (inputStr[0] == 'C')
             {
-                degreeC = int.Parse(inputStr.Substring(1, inputStr.Length - 1));
+                degreeC = float.Parse(inputStr.Substring(1, inputStr.Length - 1));
             }
-            if (inputStr[0] == 'D')
+            else if (inputStr[0] == 'D')
             {
-                degreeD = int.Parse(inputStr.Substring(1, inputStr.Length - 1));
+                degreeD = float.Parse(inputStr.Substring(1, inputStr.Length - 1));
             }
-            if (inputStr[0] == 'E')
+            else if (inputStr[0] == 'E')
             {
-                degreeE = int.Parse(inputStr.Substring(1, inputStr.Length - 1));
+                degreeE = float.Parse(inputStr.Substring(1, inputStr.Length - 1));
             }
-            if (inputStr[0] == 'F')
+            else if (inputStr[0] == 'F')
             {
-                degreeF = int.Parse(inputStr.Substring(1, inputStr.Length - 1));
+                degreeF = float.Parse(inputStr.Substring(1, inputStr.Length - 1));
             }
         }
-        catch (System.TimeoutException e)
+        catch (System.TimeoutException)
         {
 
         }
     }
 
-    public int GetDegree(char angle)
+    public float GetDegree(char angle)
     {
         switch (angle)
         {
@@ -78,4 +103,11 @@ public class ArduinoProcess : MonoBehaviour
         }
         return 0;
     }
+
+    public bool InputAChange() { return degreeA != prevA; }
+    public bool InputBChange() { return degreeB != prevB; }
+    public bool InputCChange() { return degreeC != prevC; }
+    public bool InputDChange() { return degreeD != prevD; }
+    public bool InputEChange() { return degreeE != prevE; }
+    public bool InputFChange() { return degreeF != prevF; }
 }

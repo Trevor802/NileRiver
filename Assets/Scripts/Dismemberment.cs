@@ -43,7 +43,7 @@ public class Dismemberment : MonoBehaviour
     void Start()
     {
         //rightLeg_rigid.IsSleeping();
-        Debug.Log(head.GetComponent<Rigidbody2D>());
+        //Debug.Log(head.GetComponent<Rigidbody2D>());
     }
     void Update()
     {
