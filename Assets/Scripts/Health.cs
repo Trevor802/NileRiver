@@ -80,16 +80,21 @@ public class Health : MonoBehaviour
             if (health <= 0)
             {
                 //Debug.Log("Enemy dead");
-                if (isEnemy)
+                if (isEnemy && !isDead)
                 {
                     enemySound.playDeadSound();
+                    GetComponent<Animator>().enabled = false;
+                    //foreach(Collider2D collider in colliders)
+                    //{
+                    //    collider.enabled = false;
+                    //}
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().EnemyKilledEvt();
                     if (rigid)
                     {
                         rigid.bodyType = RigidbodyType2D.Dynamic;
                     }
                 }
-                else
+                else if(!isEnemy && isDead)
                 {
                     StartCoroutine("PlayGameOver");
                     //GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().GameOverScreen();
@@ -111,6 +116,7 @@ public class Health : MonoBehaviour
                 {
                     dismemberment.leftLegCut = true;
                 }
+                isDead = true;
             }
         }
         //else if(i_collider.GetType() == typeof(CircleCollider2D))
