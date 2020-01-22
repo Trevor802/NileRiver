@@ -24,19 +24,20 @@ public class PlayerSound : MonoBehaviour
         if(delay <= 0f)
         {
             soundToPlay = Random.Range(0, 3);
-            if(soundToPlay == 1)
+            print(soundToPlay);
+            if(soundToPlay == 0)
             {
                 playerAudio.PlayOneShot(playerSound1);
             }
-            else if(soundToPlay == 2)
+            else if(soundToPlay == 1)
             {
                 playerAudio.PlayOneShot(playerSound2);
             }
-            else if(soundToPlay == 3)
+            else if(soundToPlay == 2)
             {
                 playerAudio.PlayOneShot(playerSound3);
             }
-            delay = Random.Range(5, 10);
+            delay = Random.Range(7, 13);
         }
 
     }

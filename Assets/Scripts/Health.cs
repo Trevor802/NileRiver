@@ -14,6 +14,8 @@ public class Health : MonoBehaviour
     public PolygonCollider2D leftUpperArm;
     public PolygonCollider2D rightUpperLeg;
     public PolygonCollider2D leftUpperLeg;
+
+    public EnemySound enemySound;
     
     public float health;
     public bool isEnemy;
@@ -67,12 +69,17 @@ public class Health : MonoBehaviour
                 dismemberment.headCut = true;
                 dmg = 10000;
             }
+            if (isEnemy)
+            {
+                enemySound.playHurtSound();
+            }
             health -= dmg;
             if(health <= 0)
             {
                 //Debug.Log("Enemy dead");
                 if (isEnemy)
                 {
+                    enemySound.playDeadSound();
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().EnemyKilledEvt();
                     if (rigid)
                     {
