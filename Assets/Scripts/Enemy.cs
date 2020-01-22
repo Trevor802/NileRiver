@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int HP = 10;
-    public Transform weapon;
-    private float delay = 0f;
+    //private int HP = 10;
+    //public Transform weapon;
+    //private float delay = 0f;
+    public Animator animator;
     private enum Direction
     {
         left,
         right
     }
     private Direction dir;
-    public float swingSpeed;
+    //public float swingSpeed;
  
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,10 @@ public class Enemy : MonoBehaviour
         dir = Direction.left;
     }
 
-    // Update is called once per frame
+    /*
     void Update()
     {
+        
         //print(Time.deltaTime);
         delay += Time.deltaTime;
         //if (weapon.localPosition.x > 2.2f && dir == Direction.left)
@@ -50,5 +52,10 @@ public class Enemy : MonoBehaviour
             delay = 0f;
         }
 
+    }
+    */
+    public void throwAnimationEnded()
+    {
+        animator.SetBool("Throw", false);
     }
 }

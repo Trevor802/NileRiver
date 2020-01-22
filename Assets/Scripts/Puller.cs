@@ -20,6 +20,9 @@ public class Puller : MonoBehaviour
     private float l2;
     private Rigidbody2D rb;
     private float force;
+    private Vector3 destination;
+    private bool InputDelay = false;
+    private float InputStartTime;
 
     private void Awake()
     {
@@ -29,7 +32,7 @@ public class Puller : MonoBehaviour
         }
         rb = GetComponent<Rigidbody2D>();
         m_InitConstraints = GetComponent<Rigidbody2D>().constraints;
-        force = rb.mass * Time.deltaTime * 5000;
+        force = rb.mass * Time.deltaTime * 2500;
         var Vec1 = joint2.position - joint1.position;
         var Vec2 = joint3.position - joint2.position;
         l1 = Vec1.magnitude;
@@ -53,17 +56,39 @@ public class Puller : MonoBehaviour
     private void Update()
     {
         if (ArduinoProcess.instance.InputAChange())
+        {
             InputForce('A');
+        }
         else if (ArduinoProcess.instance.InputBChange())
+        {
             InputForce('B');
+        }
         else if (ArduinoProcess.instance.InputCChange())
+        {
             InputForce('C');
+        }
         else if (ArduinoProcess.instance.InputDChange())
+        {
             InputForce('D');
+        }
         else if (ArduinoProcess.instance.InputEChange())
+        {
             InputForce('E');
+        }
         else if (ArduinoProcess.instance.InputFChange())
+        {
             InputForce('F');
+        }
+        if (InputDelay)
+        {
+            var dir = (destination - joint3.position).normalized;
+            rb.AddForceAtPosition(force * dir, ForcePoint.transform.position);
+            if (Time.time - InputStartTime >= 1)
+            {
+                InputDelay = false;
+                ForcePoint.Hold = false;
+            }
+        }
         AddForce();
     }
 
@@ -85,28 +110,27 @@ public class Puller : MonoBehaviour
         }
     }
 
-    public void InputForce(char inputChar)
+    private void InputForce(char inputChar)
     {
         if (input1 == inputChar || input2 == inputChar)
         {
             if (!ForcePoint.Locked)
             {
+                ForcePoint.Hold = true;
+                InputStartTime = Time.time;
+                InputDelay = true;
                 rb.constraints = m_InitConstraints;
                 var angle1 = ArduinoProcess.instance.GetDegree(input1);
                 var angle2 = ArduinoProcess.instance.GetDegree(input2);
                 if (isFoot)
                 {
-                    var destination = new Vector3(joint1.position.x + l1 * Mathf.Sin((a1 + angle1) * Mathf.Deg2Rad) + l2 * Mathf.Sin((a2 + angle2) * Mathf.Deg2Rad),
+                    destination = new Vector3(joint1.position.x + l1 * Mathf.Sin((a1 + angle1) * Mathf.Deg2Rad) + l2 * Mathf.Sin((a2 + angle2) * Mathf.Deg2Rad),
                         joint1.position.y + l1 * Mathf.Cos((a1 + angle1) * Mathf.Deg2Rad) + l2 * Mathf.Cos((a2 + angle2) * Mathf.Deg2Rad), 0);
-                    var dir = (destination - joint3.position).normalized;
-                    rb.AddForceAtPosition(force * dir, ForcePoint.transform.position);
                 }
                 else
                 {
-                    var destination = new Vector3(joint1.position.x + l1 * Mathf.Cos((a1 - angle1) * Mathf.Deg2Rad) + l2 * Mathf.Cos((a2 - angle2) * Mathf.Deg2Rad),
+                    destination = new Vector3(joint1.position.x + l1 * Mathf.Cos((a1 - angle1) * Mathf.Deg2Rad) + l2 * Mathf.Cos((a2 - angle2) * Mathf.Deg2Rad),
                         joint1.position.y + l1 * Mathf.Sin((a1 - angle1) * Mathf.Deg2Rad) + l2 * Mathf.Sin((a2 - angle2) * Mathf.Deg2Rad), 0);
-                    var dir = (destination - joint3.position).normalized;
-                    rb.AddForceAtPosition(force * dir, ForcePoint.transform.position);
                 }
             }
             else

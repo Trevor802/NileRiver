@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -19,12 +20,15 @@ public class Health : MonoBehaviour
     public WeaponSound weaponSound;
     
     public float health;
+    public GameObject healthBar;
     public bool isEnemy;
     public bool isDead;
     private float timer;
+    private float maxHealth;
     // Start is called before the first frame update
     void Start()
     {
+        maxHealth = health;
         timer = 0f;
         //health = 100f;
     }
@@ -71,8 +75,10 @@ public class Health : MonoBehaviour
                 dismemberment.headCut = true;
                 dmg = 10000;
             }
-            
+            Debug.Log("Hit!");
             health -= dmg;
+            if (this.CompareTag("Player"))
+                healthBar.GetComponentInChildren<Slider>().value = health / maxHealth;
             if (isEnemy && health > 0)
             {
                 enemySound.playHurtSound();
@@ -151,6 +157,7 @@ public class Health : MonoBehaviour
 
     IEnumerator PlayGameOver()
     {
+        Debug.Log("Game over ing...");
         yield return new WaitForSeconds(2);
         GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().GameOverScreen();
     }
