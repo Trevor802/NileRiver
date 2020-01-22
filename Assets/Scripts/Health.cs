@@ -49,7 +49,7 @@ public class Health : MonoBehaviour
         {
             if(i_collider == collider)
             {
-                Debug.Log(collider.name);
+                //Debug.Log(collider.name);
                 colliderNotContained = false;
             }
         }
@@ -73,11 +73,17 @@ public class Health : MonoBehaviour
                 //Debug.Log("Enemy dead");
                 if (isEnemy)
                 {
+                    GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().EnemyKilledEvt();
                     if (rigid)
                     {
                         rigid.bodyType = RigidbodyType2D.Dynamic;
                     }
                 }
+                else
+                {
+                    GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().GameOverScreen();
+                }
+
                 if (i_collider == rightUpperArm)
                 {
                     dismemberment.rightArmCut = true;
@@ -122,7 +128,7 @@ public class Health : MonoBehaviour
 
     void Dying()
     {
-        gameOver.GetComponent<UIFadeIO>().StartFadeIn();
-        Debug.Log("Game Over");
+        //gameOver.GetComponent<UIFadeIO>().StartFadeIn();
+        //Debug.Log("Game Over");
     }
 }

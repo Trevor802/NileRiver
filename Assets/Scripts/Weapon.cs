@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
         //Debug.Log(collision.name);
         if (collider_health)
         {
-            Debug.Log("Has health");
+            //Debug.Log("Has health");
             if(isEnemyWeapon && !collider_health.isEnemy)
             {
                 Debug.Log("enemy damage player");

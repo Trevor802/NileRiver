@@ -440,6 +440,7 @@ MonoBehaviour:
   leftLeg: {fileID: 4136830214659328562}
   leftLeg_foot: {fileID: 5532507383601533529}
   head: {fileID: 3409080356200379017}
+  headRigid: {fileID: 0}
 --- !u!1 &1191322381042173965
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +586,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 115
-  ForcePoint: {fileID: 0}
+  angle1: 0
+  angle2: 0
+  ForcePoint: {fileID: 964379704051594416}
+  joint1: {fileID: 0}
+  joint2: {fileID: 0}
+  joint3: {fileID: 0}
+  isFoot: 0
 --- !u!60 &3451937632599075040
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -937,7 +944,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 119
-  ForcePoint: {fileID: 0}
+  angle1: 0
+  angle2: 0
+  ForcePoint: {fileID: 4034749463191441192}
+  joint1: {fileID: 0}
+  joint2: {fileID: 0}
+  joint3: {fileID: 0}
+  isFoot: 0
 --- !u!60 &1142870513860083925
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2100,7 +2113,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 97
-  ForcePoint: {fileID: 0}
+  angle1: 0
+  angle2: 0
+  ForcePoint: {fileID: 7443342147718846108}
+  joint1: {fileID: 0}
+  joint2: {fileID: 0}
+  joint3: {fileID: 0}
+  isFoot: 0
 --- !u!60 &7156069788139657967
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2278,7 +2297,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -2368,7 +2387,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemyWeapon: 0
-  health: {fileID: 0}
 --- !u!1 &5712687855316056143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2532,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 113
-  ForcePoint: {fileID: 0}
+  angle1: 0
+  angle2: 0
+  ForcePoint: {fileID: 196953296456640562}
+  joint1: {fileID: 0}
+  joint2: {fileID: 0}
+  joint3: {fileID: 0}
+  isFoot: 0
 --- !u!60 &6891122491560324332
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3039,7 +3063,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3129,7 +3153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemyWeapon: 0
-  health: {fileID: 0}
 --- !u!1 &6281196522233230946
 GameObject:
   m_ObjectHideFlags: 0
@@ -3480,7 +3503,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3570,7 +3593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemyWeapon: 0
-  health: {fileID: 0}
 --- !u!1 &8519863579905376002
 GameObject:
   m_ObjectHideFlags: 0
@@ -3663,7 +3685,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3753,7 +3775,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isEnemyWeapon: 0
-  health: {fileID: 0}
 --- !u!1 &9100307165886847022
 GameObject:
   m_ObjectHideFlags: 0
