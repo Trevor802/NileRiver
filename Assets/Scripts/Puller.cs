@@ -5,9 +5,10 @@ using UnityEngine;
 public class Puller : MonoBehaviour
 {
     public KeyCode InputButton;
+    public Friction ForcePoint;
     public char input1;
     public char input2;
-    public Friction ForcePoint;
+    public Transform player;
     public Transform joint1;
     public Transform joint2;
     public Transform joint3;
