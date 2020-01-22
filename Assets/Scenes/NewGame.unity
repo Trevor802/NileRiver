@@ -2410,6 +2410,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6779305186713333443, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: InputButton
+      value: 337
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033812611332597202, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: InputButton
+      value: 335
+      objectReference: {fileID: 0}
+    - target: {fileID: 602149722711546815, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: InputButton
+      value: 336
+      objectReference: {fileID: 0}
+    - target: {fileID: 4432226646537055172, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: InputButton
+      value: 334
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc6a0d781e194523a0d35c62634086d, type: 3}
 --- !u!1001 &2114219535521894332
