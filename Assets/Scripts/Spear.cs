@@ -68,10 +68,10 @@ public class Spear : MonoBehaviour
 
             //shoots arrow
             spearTailRigid.bodyType = RigidbodyType2D.Dynamic;
-            spearTailRigid.gravityScale = 0.5f;
+            spearTailRigid.gravityScale = 0.4f;
 
             spearHeadRigid.bodyType = RigidbodyType2D.Dynamic;
-            spearHeadRigid.gravityScale = 0.7f;
+            spearHeadRigid.gravityScale = 0.8f;
             spearHeadRigid.AddForce(transform.right * thrust, ForceMode2D.Impulse);
 
             spearHead.GetComponent<PolygonCollider2D>().enabled = true;
