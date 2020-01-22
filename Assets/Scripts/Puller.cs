@@ -29,7 +29,7 @@ public class Puller : MonoBehaviour
         }
         rb = GetComponent<Rigidbody2D>();
         m_InitConstraints = GetComponent<Rigidbody2D>().constraints;
-        force = rb.mass * Time.deltaTime * 5000;
+        force = rb.mass * Time.deltaTime * 1500;
         var Vec1 = joint2.position - joint1.position;
         var Vec2 = joint3.position - joint2.position;
         l1 = Vec1.magnitude;
