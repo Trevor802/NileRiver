@@ -13,6 +13,7 @@ public class Spear : MonoBehaviour
     public Transform spearHeadTransform;
 
     public SpriteRenderer enemySpear;
+    public BoxCollider2D enemySpearCollider;
 
     public SpriteRenderer throwSpearHead;
     public SpriteRenderer throwSpearTail;
@@ -35,6 +36,7 @@ public class Spear : MonoBehaviour
         spearHead.GetComponent<PolygonCollider2D>().enabled = false;
         throwSpearHead.enabled = false;
         throwSpearTail.enabled = false;
+        enemySpearCollider.enabled = true;
         /*
         //originalTransform = arrowHeadTransform;
 
@@ -52,6 +54,7 @@ public class Spear : MonoBehaviour
     {
         if(animator.GetBool("Throw") == false && throwed == false)
         {
+            enemySpearCollider.enabled = false;
             throwed = true;
             enemySpear.enabled = false;
 
@@ -78,6 +81,7 @@ public class Spear : MonoBehaviour
         }
         else if(animator.GetBool("Throw") == true && throwed == true)
         {
+            enemySpearCollider.enabled = true;
             enemySpear.enabled = true;
             throwed = false;
             spearHead.GetComponent<PolygonCollider2D>().enabled = false;

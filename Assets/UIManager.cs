@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
     public void GameStart()
     {
         //Debug.Log("Load game scene");
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("NewGame");
     }
 
     public void Credit()
@@ -67,6 +67,6 @@ public class UIManager : MonoBehaviour
     IEnumerator RestartGame()
     {
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("NewGame");
     }
 }
