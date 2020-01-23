@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2597221895205971796}
   - component: {fileID: 3217291768937195349}
   - component: {fileID: 4325077015028419377}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: weapon_enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 3205280178304505907}
   - component: {fileID: 3205280178304505900}
   - component: {fileID: 7424892156551888620}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Belt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 3205280178317366533}
   - component: {fileID: 3205280178317366534}
   - component: {fileID: 644759434476081178}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftArm_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3205280178412626042}
   - component: {fileID: 3205280178412626041}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Wrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 3205280178468822127}
   - component: {fileID: 3205280178468822120}
   - component: {fileID: 3608511359248425169}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3205280178534490325}
   - component: {fileID: 3205280178534490324}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HandFront1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 3205280178624479622}
   - component: {fileID: 3205280178624479623}
   - component: {fileID: 6840923360795828927}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightLeg_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 3205280178663109220}
   - component: {fileID: 3205280178663109221}
   - component: {fileID: 7043607797918143060}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3205280178837877184}
   - component: {fileID: 2025742510892028344}
-  - component: {fileID: 6363311045319422887}
   - component: {fileID: 1058953834380919282}
   - component: {fileID: 6983358736437333416}
   - component: {fileID: 5254270312986022348}
@@ -977,7 +976,7 @@ GameObject:
   - component: {fileID: 8583669242585686263}
   - component: {fileID: 7900418855614832467}
   - component: {fileID: 3386374255934130601}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy_spear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1032,7 +1031,7 @@ MonoBehaviour:
   - {fileID: 6840923360795828927}
   invulnerableTime: 0
   gameOver: {fileID: 0}
-  dismemberment: {fileID: 6363311045319422887}
+  dismemberment: {fileID: 6983358736437333416}
   rigid: {fileID: 1058953834380919282}
   rightUpperArm: {fileID: 7441866472910898181}
   leftUpperArm: {fileID: 644759434476081178}
@@ -1044,37 +1043,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isEnemy: 1
   isDead: 0
---- !u!114 &6363311045319422887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3205280178837877185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841d160929fad50449fa7f45015cd335, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  headCut: 0
-  rightArmCut: 0
-  leftArmCut: 0
-  rightLegCut: 0
-  leftLegCut: 0
-  rightArm: {fileID: 3205280180356573989}
-  rightArm_hand: {fileID: 3205280179486754110}
-  leftArm: {fileID: 3205280178317366535}
-  leftArm_hand: {fileID: 3205280179511937757}
-  rightLeg: {fileID: 3205280178875263360}
-  rightLeg_foot: {fileID: 3205280178624479616}
-  leftLeg: {fileID: 3205280179057673187}
-  leftLeg_foot: {fileID: 3205280179529299782}
-  head: {fileID: 3205280180142648174}
-  headBlood: {fileID: 0}
-  rightArmBlood: {fileID: 0}
-  leftArmBlood: {fileID: 0}
-  rightLegBlood: {fileID: 0}
-  leftLegBlood: {fileID: 0}
 --- !u!50 &1058953834380919282
 Rigidbody2D:
   serializedVersion: 4
@@ -1296,7 +1264,7 @@ GameObject:
   - component: {fileID: 3205280178875263366}
   - component: {fileID: 3205280178875263367}
   - component: {fileID: 4419146803634487682}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightLeg_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1425,7 +1393,7 @@ GameObject:
   - component: {fileID: 3205280179057673185}
   - component: {fileID: 3205280179057673186}
   - component: {fileID: 6140268744983567340}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftLeg_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1521,7 @@ GameObject:
   - component: {fileID: 3205280179486754108}
   - component: {fileID: 3205280179486754109}
   - component: {fileID: 1344922789698607982}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightArm_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1684,7 +1652,7 @@ GameObject:
   - component: {fileID: 3205280179511938339}
   - component: {fileID: 3205280179511937756}
   - component: {fileID: 2377285299548217984}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftArm_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1787,7 @@ GameObject:
   - component: {fileID: 3205280179529299780}
   - component: {fileID: 3205280179529299781}
   - component: {fileID: 6266880799397091415}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LeftLeg_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1955,7 +1923,7 @@ GameObject:
   - component: {fileID: 3205280180142648173}
   - component: {fileID: 3205280180142648172}
   - component: {fileID: 6406864136793167283}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head
   m_TagString: Head
   m_Icon: {fileID: 0}
@@ -2085,7 +2053,7 @@ GameObject:
   - component: {fileID: 3205280180356573995}
   - component: {fileID: 3205280180356573988}
   - component: {fileID: 7441866472910898181}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: RightArm_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2216,7 +2184,7 @@ GameObject:
   - component: {fileID: 4985308346042471136}
   - component: {fileID: 5350868821154051161}
   - component: {fileID: 4207546665060080918}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spearHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,6 +2311,7 @@ MonoBehaviour:
   spearTailRigid: {fileID: 3421416602239933651}
   spearHeadTransform: {fileID: 1663600160620625934}
   enemySpear: {fileID: 2597221895205971796}
+  enemySpearCollider: {fileID: 0}
   throwSpearHead: {fileID: 475697215327765280}
   throwSpearTail: {fileID: 2906884581384747965}
   animator: {fileID: 8583669242585686263}
@@ -2417,7 +2386,7 @@ GameObject:
   - component: {fileID: 4122593759173681853}
   - component: {fileID: 2906884581384747965}
   - component: {fileID: 3421416602239933651}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: spearTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2525,6 +2494,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2580,6 +2554,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708391311531350721, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4, type: 3}
 --- !u!1 &1265894729461604839 stripped
@@ -2610,6 +2589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
         type: 3}
@@ -2666,6 +2650,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.554
       objectReference: {fileID: 0}
+    - target: {fileID: 8708391311531350721, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4, type: 3}
 --- !u!4 &1265894729582387314 stripped
@@ -2696,6 +2685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
         type: 3}
@@ -2752,6 +2746,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708391311531350721, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8708391311531350727, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -2769,15 +2768,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4, type: 3}
---- !u!4 &1265894729014478829 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7587218808201056708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1265894729014478830 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7587218808201056708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1265894729014478829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
     type: 3}
   m_PrefabInstance: {fileID: 7587218808201056708}
   m_PrefabAsset: {fileID: 0}
@@ -2797,6 +2796,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
         type: 3}
@@ -2853,6 +2857,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708391311531350721, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4, type: 3}
 --- !u!1 &1265894730551699771 stripped
@@ -2883,6 +2892,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
         type: 3}
@@ -2939,17 +2953,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8708391311531350721, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4, type: 3}
---- !u!1 &1265894730170905477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
-    type: 3}
-  m_PrefabInstance: {fileID: 7587218809559066031}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1265894730170905478 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8708391311147669033, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
+    type: 3}
+  m_PrefabInstance: {fileID: 7587218809559066031}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1265894730170905477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708391311147669034, guid: 17fd82c9b0ddbf544a6ec695ac6a35f4,
     type: 3}
   m_PrefabInstance: {fileID: 7587218809559066031}
   m_PrefabAsset: {fileID: 0}
