@@ -1043,6 +1043,37 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isEnemy: 1
   isDead: 0
+--- !u!114 &6363311045319422887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3205280178837877185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841d160929fad50449fa7f45015cd335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headCut: 0
+  rightArmCut: 0
+  leftArmCut: 0
+  rightLegCut: 0
+  leftLegCut: 0
+  rightArm: {fileID: 3205280180356573989}
+  rightArm_hand: {fileID: 3205280179486754110}
+  leftArm: {fileID: 3205280178317366535}
+  leftArm_hand: {fileID: 3205280179511937757}
+  rightLeg: {fileID: 3205280178875263360}
+  rightLeg_foot: {fileID: 3205280178624479616}
+  leftLeg: {fileID: 3205280179057673187}
+  leftLeg_foot: {fileID: 3205280179529299782}
+  head: {fileID: 3205280180142648174}
+  headBlood: {fileID: 1265894730170905477}
+  rightArmBlood: {fileID: 1265894729582387313}
+  leftArmBlood: {fileID: 1265894729014478830}
+  rightLegBlood: {fileID: 1265894729461604839}
+  leftLegBlood: {fileID: 1265894730551699771}
 --- !u!50 &1058953834380919282
 Rigidbody2D:
   serializedVersion: 4
