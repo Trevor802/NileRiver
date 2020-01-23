@@ -12,6 +12,7 @@ public class Puller : MonoBehaviour
     public Transform joint1;
     public Transform joint2;
     public Transform joint3;
+    public bool isLeft;
     public bool isFoot = false;
 
     private RigidbodyConstraints2D m_InitConstraints;
@@ -22,6 +23,7 @@ public class Puller : MonoBehaviour
     private Rigidbody2D rb;
     private float force;
     private Vector3 destination;
+    private Vector3 localDir;
     private bool InputDelay = false;
     private float InputStartTime;
 
@@ -38,20 +40,6 @@ public class Puller : MonoBehaviour
         var Vec2 = joint3.position - joint2.position;
         l1 = Vec1.magnitude;
         l2 = Vec2.magnitude;
-        if (isFoot)
-        {
-            int sign1 = (Vec1.x >= 0) ? 1 : -1;
-            int sign2 = (Vec2.x >= 0) ? 1 : -1;
-            a1 = Vector3.Angle(new Vector3(0, 1, 0), Vec1) * sign1;
-            a2 = Vector3.Angle(new Vector3(0, 1, 0), Vec2) * sign2;
-        }
-        else
-        {
-            int sign1 = (Vec1.y >= 0) ? 1 : -1;
-            int sign2 = (Vec2.y >= 0) ? 1 : -1;
-            a1 = Vector3.Angle(new Vector3(1, 0, 0), Vec1) * sign1;
-            a2 = Vector3.Angle(new Vector3(1, 0, 0), Vec2) * sign2;
-        }
     }
 
     private void Update()
@@ -82,8 +70,7 @@ public class Puller : MonoBehaviour
         }
         if (InputDelay)
         {
-            var dir = (destination - joint3.position).normalized;
-            rb.AddForceAtPosition(force * dir, ForcePoint.transform.position);
+            rb.AddForceAtPosition(force * localDir, ForcePoint.transform.position);
             if (Time.time - InputStartTime >= 1)
             {
                 InputDelay = false;
@@ -123,16 +110,13 @@ public class Puller : MonoBehaviour
                 rb.constraints = m_InitConstraints;
                 var angle1 = ArduinoProcess.instance.GetDegree(input1);
                 var angle2 = ArduinoProcess.instance.GetDegree(input2);
-                if (isFoot)
-                {
-                    destination = new Vector3(joint1.position.x + l1 * Mathf.Sin((a1 + angle1) * Mathf.Deg2Rad) + l2 * Mathf.Sin((a2 + angle2) * Mathf.Deg2Rad),
-                        joint1.position.y + l1 * Mathf.Cos((a1 + angle1) * Mathf.Deg2Rad) + l2 * Mathf.Cos((a2 + angle2) * Mathf.Deg2Rad), 0);
-                }
-                else
-                {
-                    destination = new Vector3(joint1.position.x + l1 * Mathf.Cos((a1 - angle1) * Mathf.Deg2Rad) + l2 * Mathf.Cos((a2 - angle2) * Mathf.Deg2Rad),
-                        joint1.position.y + l1 * Mathf.Sin((a1 - angle1) * Mathf.Deg2Rad) + l2 * Mathf.Sin((a2 - angle2) * Mathf.Deg2Rad), 0);
-                }
+                var alpha = -angle1;
+                var beta = alpha + angle2;
+                Debug.Log("alpha  " + alpha);
+                Debug.Log("beta   " + beta);
+                destination = new Vector3(joint1.position.x + l1 * Mathf.Cos(alpha * Mathf.Deg2Rad) + l2 * Mathf.Cos(beta * Mathf.Deg2Rad),
+                    joint1.position.y + l1 * Mathf.Sin(alpha * Mathf.Deg2Rad) + l2 * Mathf.Sin(beta * Mathf.Deg2Rad), 0);
+                localDir = Quaternion.Euler(0, 0, Vector3.Angle(Vector3.up, player.up)) * (destination - joint1.position);
             }
             else
             {

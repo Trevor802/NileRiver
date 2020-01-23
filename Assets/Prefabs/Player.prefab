@@ -698,7 +698,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.19999994, y: -1.1510004}
+  m_ConnectedAnchor: {x: 0.20000029, y: -1.151}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -720,13 +720,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 115
+  ForcePoint: {fileID: 964379704051594416}
   input1: 69
   input2: 70
-  ForcePoint: {fileID: 964379704051594416}
+  player: {fileID: 297794438393299586}
   joint1: {fileID: 7118637213868684524}
   joint2: {fileID: 8582124687814445724}
   joint3: {fileID: 7021021092956557127}
-  isFoot: 1
 --- !u!60 &3451937632599075040
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1058,7 +1058,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 1.4050001, y: -0.008999355}
+  m_ConnectedAnchor: {x: 1.4049997, y: -0.0089998245}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1080,13 +1080,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 119
+  ForcePoint: {fileID: 4034749463191441192}
   input1: 65
   input2: 66
-  ForcePoint: {fileID: 4034749463191441192}
+  player: {fileID: 297794438393299586}
   joint1: {fileID: 4608831757220197736}
   joint2: {fileID: 2376781525409004680}
   joint3: {fileID: 1114306200082572275}
-  isFoot: 0
 --- !u!60 &1142870513860083925
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2231,7 +2231,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.389, y: -1.23}
+  m_ConnectedAnchor: {x: -0.38899994, y: -1.23}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2253,13 +2253,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 97
+  ForcePoint: {fileID: 7443342147718846108}
   input1: 71
   input2: 72
-  ForcePoint: {fileID: 7443342147718846108}
+  player: {fileID: 297794438393299586}
   joint1: {fileID: 8035802644793462131}
   joint2: {fileID: 5335347624049273722}
   joint3: {fileID: 850438927594940250}
-  isFoot: 1
 --- !u!60 &7156069788139657967
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2645,7 +2645,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -1.4099998, y: -0.02000045}
+  m_ConnectedAnchor: {x: -1.4100001, y: -0.020000458}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2667,13 +2667,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputButton: 113
+  ForcePoint: {fileID: 196953296456640562}
   input1: 67
   input2: 68
-  ForcePoint: {fileID: 196953296456640562}
+  player: {fileID: 297794438393299586}
   joint1: {fileID: 2480240992362923846}
   joint2: {fileID: 655658210524076958}
   joint3: {fileID: 8837090156656155823}
-  isFoot: 0
 --- !u!60 &6891122491560324332
 PolygonCollider2D:
   m_ObjectHideFlags: 0
