@@ -1070,11 +1070,11 @@ MonoBehaviour:
   leftLeg: {fileID: 3205280179057673187}
   leftLeg_foot: {fileID: 3205280179529299782}
   head: {fileID: 3205280180142648174}
-  headBlood: {fileID: 0}
-  rightArmBlood: {fileID: 0}
-  leftArmBlood: {fileID: 0}
-  rightLegBlood: {fileID: 0}
-  leftLegBlood: {fileID: 0}
+  headBlood: {fileID: 1265894730170905477}
+  rightArmBlood: {fileID: 1265894729582387313}
+  leftArmBlood: {fileID: 1265894729014478830}
+  rightLegBlood: {fileID: 1265894729461604839}
+  leftLegBlood: {fileID: 1265894730551699771}
 --- !u!50 &1058953834380919282
 Rigidbody2D:
   serializedVersion: 4
@@ -2343,6 +2343,7 @@ MonoBehaviour:
   spearTailRigid: {fileID: 3421416602239933651}
   spearHeadTransform: {fileID: 1663600160620625934}
   enemySpear: {fileID: 2597221895205971796}
+  enemySpearCollider: {fileID: 0}
   throwSpearHead: {fileID: 475697215327765280}
   throwSpearTail: {fileID: 2906884581384747965}
   animator: {fileID: 8583669242585686263}

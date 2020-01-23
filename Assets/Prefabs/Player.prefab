@@ -357,10 +357,11 @@ MonoBehaviour:
   ForcePoint: {fileID: 4991317220184359582}
   input1: 67
   input2: 68
-  player: {fileID: 0}
+  player: {fileID: 4890615750312060974}
   joint1: {fileID: 7319643938118528490}
   joint2: {fileID: 5685322568124985650}
   joint3: {fileID: 4421595606155638275}
+  isLeft: 0
   isFoot: 0
 --- !u!60 &1755594678338225728
 PolygonCollider2D:
@@ -758,10 +759,11 @@ MonoBehaviour:
   ForcePoint: {fileID: 2356261479822097456}
   input1: 71
   input2: 72
-  player: {fileID: 0}
+  player: {fileID: 4890615750312060974}
   joint1: {fileID: 2917180845184640991}
   joint2: {fileID: 1005983933171270102}
   joint3: {fileID: 5490541988228304374}
+  isLeft: 0
   isFoot: 1
 --- !u!60 &2643745906397737027
 PolygonCollider2D:
@@ -2811,10 +2813,11 @@ MonoBehaviour:
   ForcePoint: {fileID: 5376494559944875548}
   input1: 69
   input2: 70
-  player: {fileID: 0}
+  player: {fileID: 4890615750312060974}
   joint1: {fileID: 2681178619443027520}
   joint2: {fileID: 3523745123773489200}
   joint3: {fileID: 2778899193663694315}
+  isLeft: 0
   isFoot: 1
 --- !u!60 &7500940442005668428
 PolygonCollider2D:
@@ -3427,10 +3430,11 @@ MonoBehaviour:
   ForcePoint: {fileID: 8070802555182753156}
   input1: 65
   input2: 66
-  player: {fileID: 0}
+  player: {fileID: 4890615750312060974}
   joint1: {fileID: 8649958560633249732}
   joint2: {fileID: 7422786917222323748}
   joint3: {fileID: 5226921039898675551}
+  isLeft: 0
   isFoot: 0
 --- !u!60 &5198075114241190521
 PolygonCollider2D:

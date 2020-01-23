@@ -102,23 +102,18 @@ public class Puller : MonoBehaviour
     {
         if (input1 == inputChar || input2 == inputChar)
         {
-            if (!ForcePoint.Locked)
-            {
-                ForcePoint.Hold = true;
-                InputStartTime = Time.time;
-                InputDelay = true;
-                rb.constraints = m_InitConstraints;
-                var angle1 = ArduinoProcess.instance.GetDegree(input1);
-                var angle2 = ArduinoProcess.instance.GetDegree(input2);
-                var alpha = -angle1;
-                var beta = alpha + angle2;
-                Debug.Log("alpha  " + alpha);
-                Debug.Log("beta   " + beta);
-                destination = new Vector3(joint1.position.x + l1 * Mathf.Cos(alpha * Mathf.Deg2Rad) + l2 * Mathf.Cos(beta * Mathf.Deg2Rad),
-                    joint1.position.y + l1 * Mathf.Sin(alpha * Mathf.Deg2Rad) + l2 * Mathf.Sin(beta * Mathf.Deg2Rad), 0);
-                localDir = Quaternion.Euler(0, 0, Vector3.Angle(Vector3.up, player.up)) * (destination - joint1.position);
-            }
-            else
+            ForcePoint.Hold = true;
+            InputStartTime = Time.time;
+            InputDelay = true;
+            rb.constraints = m_InitConstraints;
+            var angle1 = ArduinoProcess.instance.GetDegree(input1);
+            var angle2 = ArduinoProcess.instance.GetDegree(input2);
+            var alpha = -angle1;
+            var beta = alpha + angle2;
+            destination = new Vector3(joint1.position.x + l1 * Mathf.Cos(alpha * Mathf.Deg2Rad) + l2 * Mathf.Cos(beta * Mathf.Deg2Rad),
+                joint1.position.y + l1 * Mathf.Sin(alpha * Mathf.Deg2Rad) + l2 * Mathf.Sin(beta * Mathf.Deg2Rad), 0);
+            localDir = destination - joint1.position;
+            if (ForcePoint.Locked)
             {
                 rb.constraints = RigidbodyConstraints2D.FreezePosition;
             }                                                                                                                                                                                                                                                                                                   

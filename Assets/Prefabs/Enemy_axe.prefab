@@ -1762,11 +1762,11 @@ MonoBehaviour:
   leftLeg: {fileID: 7718541098271223829}
   leftLeg_foot: {fileID: 7718541096725333168}
   head: {fileID: 7718541097217054872}
-  headBlood: {fileID: 0}
-  rightArmBlood: {fileID: 0}
-  leftArmBlood: {fileID: 0}
-  rightLegBlood: {fileID: 0}
-  leftLegBlood: {fileID: 0}
+  headBlood: {fileID: 1665358622172718530}
+  rightArmBlood: {fileID: 1665358622189115978}
+  leftArmBlood: {fileID: 1665358620560627318}
+  rightLegBlood: {fileID: 1665358622331418101}
+  leftLegBlood: {fileID: 1665358622392032963}
 --- !u!50 &5320050276117312004
 Rigidbody2D:
   serializedVersion: 4
