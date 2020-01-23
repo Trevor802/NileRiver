@@ -106,7 +106,7 @@ public class Puller : MonoBehaviour
             InputStartTime = Time.time;
             InputDelay = true;
             rb.constraints = m_InitConstraints;
-            var angle1 = ArduinoProcess.instance.GetDegree(input1);
+            var angle1 = ArduinoProcess.instance.GetDegree(input1) * 1.5f;
             var angle2 = ArduinoProcess.instance.GetDegree(input2);
             var alpha = -angle1;
             var beta = alpha + angle2;

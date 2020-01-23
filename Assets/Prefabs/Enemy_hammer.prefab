@@ -1575,6 +1575,9 @@ MonoBehaviour:
   leftUpperLeg: {fileID: 3692884700989596874}
   enemySound: {fileID: 8925257497607301384}
   weaponSound: {fileID: 840682066073886837}
+  deadLayer:
+    serializedVersion: 2
+    m_Bits: 32768
   health: 100
   healthBar: {fileID: 0}
   isEnemy: 1
