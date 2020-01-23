@@ -3043,7 +3043,12 @@ PrefabInstance:
     - target: {fileID: 469729834621260425, guid: ecc6a0d781e194523a0d35c62634086d,
         type: 3}
       propertyPath: health
-      value: 1000
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 469729834621260425, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: deadLayer.m_Bits
+      value: 513
       objectReference: {fileID: 0}
     - target: {fileID: 4550153677885402008, guid: ecc6a0d781e194523a0d35c62634086d,
         type: 3}
@@ -3089,6 +3094,46 @@ PrefabInstance:
         type: 3}
       propertyPath: InputButton
       value: 335
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490541988228304374, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5490541988228304374, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226921039898675551, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5226921039898675551, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778899193663694315, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2778899193663694315, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421595606155638275, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4421595606155638275, guid: ecc6a0d781e194523a0d35c62634086d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc6a0d781e194523a0d35c62634086d, type: 3}
@@ -3221,6 +3266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_spear
       objectReference: {fileID: 0}
+    - target: {fileID: 4325077015028419377, guid: ce5394674debd9045a11f1f6856789be,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3205280178837877184, guid: ce5394674debd9045a11f1f6856789be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3301,11 +3351,6 @@ PrefabInstance:
       propertyPath: enemySpearCollider
       value: 
       objectReference: {fileID: 6921225126752090105}
-    - target: {fileID: 4325077015028419377, guid: ce5394674debd9045a11f1f6856789be,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5394674debd9045a11f1f6856789be, type: 3}
 --- !u!1001 &8054372467483104639
