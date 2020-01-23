@@ -18,6 +18,8 @@ public class Health : MonoBehaviour
 
     public EnemySound enemySound;
     public WeaponSound weaponSound;
+
+    public LayerMask deadLayer;
     
     public float health;
     public GameObject healthBar;
@@ -90,10 +92,11 @@ public class Health : MonoBehaviour
                 {
                     enemySound.playDeadSound();
                     GetComponent<Animator>().enabled = false;
-                    //foreach(Collider2D collider in colliders)
-                    //{
-                    //    collider.enabled = false;
-                    //}
+                    Debug.Log("---------------------------------");
+                    foreach (Collider2D collider in GetComponentsInChildren<Collider2D>())
+                    {
+                        collider.gameObject.layer = 15;
+                    }
                     GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinFailEvent>().EnemyKilledEvt();
                     if (rigid)
                     {
