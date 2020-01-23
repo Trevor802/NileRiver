@@ -3014,6 +3014,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5187882250831266867}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &6921225126752090105 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 4325077015028419377, guid: ce5394674debd9045a11f1f6856789be,
+    type: 3}
+  m_PrefabInstance: {fileID: 7587218809526869191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!58 &7010155161750516699 stripped
 CircleCollider2D:
   m_CorrespondingSourceObject: {fileID: 2789449531129378792, guid: ecc6a0d781e194523a0d35c62634086d,
@@ -3114,6 +3120,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4325077015028419377, guid: ce5394674debd9045a11f1f6856789be,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3205280178837877185, guid: ce5394674debd9045a11f1f6856789be,
         type: 3}
       propertyPath: m_Name
@@ -3174,6 +3185,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1663600160620625934, guid: ce5394674debd9045a11f1f6856789be,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663600160620625934, guid: ce5394674debd9045a11f1f6856789be,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4985308346042471136, guid: ce5394674debd9045a11f1f6856789be,
+        type: 3}
+      propertyPath: enemySpearCollider
+      value: 
+      objectReference: {fileID: 6921225126752090105}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce5394674debd9045a11f1f6856789be, type: 3}
 --- !u!1001 &8054372467483104639
